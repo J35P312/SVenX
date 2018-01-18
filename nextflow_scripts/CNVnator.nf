@@ -12,7 +12,8 @@ process CNVnator {
         errorStrategy 'ignore'
         //tag { bam_file }       
 
-        //cpus 1
+        cpus 1
+        time "1d"
 
         input:
         //set ID,  file(bam_file), file(bai_file) from CNVnator_bam
