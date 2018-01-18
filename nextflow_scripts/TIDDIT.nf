@@ -11,7 +11,8 @@ process TIDDIT {
     errorStrategy 'ignore'      
         //tag { bam_file }
     
-        // cpus 1
+        cpus 1
+        time "2d"
         
     input:
 
@@ -22,7 +23,7 @@ process TIDDIT {
     
     script:
     """
-        ${TIDDIT_exec_file} --sv -b ${bam} -i 20000 -r 100 -p ${params.TIDDIT_pairs} -q ${params.TIDDIT_q} -o ${ID}_TIDDIT
+        python ${TIDDIT_exec_file} --sv -b ${bam} -i 20000 -r 100 -p ${params.TIDDIT_pairs} -q ${params.TIDDIT_q} -o ${ID}_TIDDIT
         cat ${ID}_TIDDIT.vcf | grep -v hs37 > ${ID}_TIDDIT_filtered.vcf
     """
     }

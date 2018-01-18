@@ -5,6 +5,9 @@ process VEP {
 	publishDir params.workingDir, mode: "copy", overwrite: true
 	errorStrategy 'ignore' 
 
+    time "1d"
+    cpus 1
+
 	input:
 	¤¤¤¤
 

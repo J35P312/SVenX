@@ -5,6 +5,9 @@ combined_final = @@@@@
 process SVDB_merge {
     publishDir params.workingDir, mode: 'copy', overwrite: true
     errorStrategy 'ignore'      
+
+    cpus 1
+    time "2d"
         
     input:
     set ID,  ¤¤¤¤¤  from combined_final  

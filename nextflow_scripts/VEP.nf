@@ -5,6 +5,9 @@ process VEP_annotation {
 	publishDir params.workingDir, mode: "copy", overwrite: true
 	errorStrategy 'ignore' 
 
+    cpus 1
+    time "1d"
+
 	input:
 	set ID, bam, dels_vcf, large_svs_vcf, phased_variants_vcf from wgs_outs_vep
 

@@ -181,7 +181,4 @@ f= open('SVenX.conf', "w")
 f.write(template)
 f.close()
 
-# Make the launching-script executable 
-subprocess.call('chmod +x ./SVenX.sh', shell=True)
-
 print 'Setup is completed'
