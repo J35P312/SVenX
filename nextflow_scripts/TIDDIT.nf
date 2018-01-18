@@ -11,7 +11,8 @@ process TIDDIT {
     errorStrategy 'ignore'      
         //tag { bam_file }
     
-        // cpus 1
+        cpus 1
+        time "2d"
         
     input:
 
