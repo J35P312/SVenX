@@ -235,8 +235,8 @@ def create_script (wgs_script, vep_script, TIDDIT_script, CNVnator_script, progr
 		if ('TIDDIT' in program_list) or ('CNVnator' in program_list):
 			subprocess.call('cat SVDB_merge.nf', shell=True, stdout=outfile)
 			print 'SVDB_merge was added to SVenX script'
-			subprocess.call('cat VEP_SVDB.nf', shell=True, stdout=outfile)
-			print 'vep and SVDB query was added to SVenX script'
+		subprocess.call('cat VEP_SVDB.nf', shell=True, stdout=outfile)
+		print 'vep and SVDB query was added to SVenX script'
 
 #		if ('annotation' in program_list):
 #			subprocess.call('cat '+ str(annotation_script), shell=True, stdout=outfile)
